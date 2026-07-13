@@ -2,15 +2,44 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Accommodation;
+use App\Models\Booking;
+use App\Models\Rate;
+use App\Models\Room;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
+    public function run(): void
+    {
+        $accommodation = Accommodation::create([
+            'name' => 'Safari Lodge Kenya',
+            'location' => 'Maasai Mara',
+            'description' => 'A rustic lodge overlooking the savannah.',
+        ]);
 
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void {}
+        $room = Room::create([
+            'accommodation_uuid' => $accommodation->uuid,
+            'name' => 'Deluxe Tent',
+            'type' => 'safari_tent',
+            'description' => 'Spacious tented room with private deck.',
+            'max_guests' => 4,
+        ]);
+
+        Rate::create([
+            'room_uuid' => $room->uuid,
+            'start_date' => '2026-08-01',
+            'end_date' => '2026-08-31',
+            'price_per_night' => 250.00,
+        ]);
+
+        Booking::create([
+            'guest_name' => 'Jane Test',
+            'email' => 'jane@test.com',
+            'room_uuid' => $room->uuid,
+            'number_of_guests' => 2,
+            'check_in_on' => '2026-08-10',
+            'check_out_on' => '2026-08-15',
+        ]);
+    }
 }
