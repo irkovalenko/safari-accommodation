@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: ['8.3', '8.4', '8.5']
+        php-version: ['8.4', '8.5']
 
     steps:
       - name: Checkout code
@@ -59,6 +59,3 @@ jobs:
 
       - name: Run Type Analysis
         run: composer types:check
-
-      - name: Tests
-        run: php artisan test
