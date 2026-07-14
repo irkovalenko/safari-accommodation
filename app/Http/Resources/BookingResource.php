@@ -27,7 +27,7 @@ class BookingResource extends JsonResource
             'check_out_on' => $this->check_out_on,
             'total_price' => $this->total_price,
             'room' => new RoomResource($this->whenLoaded('room')),
-            'booked_on' => $this->booked_on?->format('Y-m-d'),
+            'booked_on' => $this->booked_on->format('Y-m-d'),
         ];
     }
 }
