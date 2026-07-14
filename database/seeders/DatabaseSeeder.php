@@ -26,11 +26,27 @@ class DatabaseSeeder extends Seeder
             'max_guests' => 4,
         ]);
 
+        // high season rate
         Rate::create([
             'room_uuid' => $room->uuid,
-            'start_date' => '2026-08-01',
+            'start_date' => '2026-06-01',
             'end_date' => '2026-08-31',
             'price_per_night' => 250.00,
+        ]);
+
+        // low season rate
+        Rate::create([
+            'room_uuid' => $room->uuid,
+            'start_date' => '2026-01-01',
+            'end_date' => '2026-05-31',
+            'price_per_night' => 150.00,
+        ]);
+
+        Rate::create([
+            'room_uuid' => $room->uuid,
+            'start_date' => '2026-09-01',
+            'end_date' => '2026-12-31',
+            'price_per_night' => 150.00,
         ]);
 
         Booking::create([

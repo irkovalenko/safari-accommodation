@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Room extends Model
 {
@@ -33,7 +32,7 @@ class Room extends Model
     /**
      * @return HasMany<Rate, $this>
      */
-    public function rate(): HasMany
+    public function rates(): HasMany
     {
         return $this->hasMany(Rate::class, 'room_uuid', 'uuid');
     }
