@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AccommodationController;
 use App\Http\Controllers\Api\BookingController;
+use App\Http\Controllers\RoomController;
+use App\Models\Accommodation;
 use Illuminate\Support\Facades\Route;
 
 
@@ -12,3 +15,6 @@ GET http://127.0.0.1:8000/api/bookings - showing all bookings
 POST http://127.0.0.1:8000/api/bookings - create a booking
 GET http://127.0.0.1:8000/api/bookings/{uuid} - show one booking (confirmation)
 */
+
+Route::get('/rooms/{room}/rates', [RoomController::class, 'rates']);
+Route::apiResource('/accommodations', AccommodationController::class);

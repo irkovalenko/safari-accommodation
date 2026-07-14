@@ -4,13 +4,11 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\RoomResource;
 
 /**
- * @mixin \App\Models\Accommodation
+ * @mixin \App\Models\Rate
  */
-
-class AccommodationResource extends JsonResource
+class RateResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -21,9 +19,9 @@ class AccommodationResource extends JsonResource
     {
         return [
             'uuid' => $this->uuid,
-            'name' => $this->name,
-            'location' => $this->location,
-            'rooms' => RoomResource::collection($this->whenLoaded('rooms')),
+            'start_date' => $this->start_date,
+            'end_date' => $this->end_date,
+            'price_per_night' => (float) $this->price_per_night,
         ];
     }
 }
