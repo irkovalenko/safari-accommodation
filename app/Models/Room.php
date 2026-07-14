@@ -31,7 +31,7 @@ class Room extends Model
     }
 
     /**
-     * @return HasOne<Rate, $this>
+     * @return HasMany<Rate, $this>
      */
     public function rate(): HasMany
     {

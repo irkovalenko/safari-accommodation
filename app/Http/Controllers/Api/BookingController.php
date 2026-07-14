@@ -20,20 +20,4 @@ class BookingController extends Controller
 
         return response()->json(['data' => $bookings], 200);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Booking $booking)
-    {
-        //
-    }
 }
