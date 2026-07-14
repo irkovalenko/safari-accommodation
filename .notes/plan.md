@@ -71,6 +71,7 @@ BookingForm and Button were extracted to separate components since otherwise Gue
 # To do when there is a time for polishing things
 
 - Handle Bookings.jsx url - now the already filled data travel in url via query parameters. As a result, url looks clumsy.
+- Handle currencies - maybe a separate table so user can select it. Now the dollar sign is just added in frontend.
 - Authentification layer since currently admin page is visible for everyone without context, user must be able to create account or make a booking as guest while a user with admin scope sees all bookings. (Laravel breeze?)
 
 From additonal things given in task description, I would definitely go for all of them, except writing a test, so:
