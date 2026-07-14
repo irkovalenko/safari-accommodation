@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
             'number_of_guests' => 2,
             'check_in_on' => '2026-08-10',
             'check_out_on' => '2026-08-15',
+            'total_price' => 5000,
         ]);
     }
 }
