@@ -16,8 +16,8 @@ class Booking extends Model
         'guest_name',
         'email',
         'number_of_guests',
-        'check_in_date',
-        'check_out_date',
+        'check_in_on',
+        'check_out_on',
         'room_uuid',
         'total_price',
     ];

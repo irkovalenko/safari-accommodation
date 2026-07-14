@@ -33,9 +33,9 @@ class Room extends Model
     /**
      * @return HasOne<Rate, $this>
      */
-    public function rate(): HasOne
+    public function rate(): HasMany
     {
-        return $this->hasOne(Rate::class, 'room_uuid', 'uuid');
+        return $this->hasMany(Rate::class, 'room_uuid', 'uuid');
     }
 
     /**

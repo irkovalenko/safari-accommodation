@@ -52,5 +52,8 @@ so, show it as unavailable.
 - Booking form: guest name, email, number of guests.
 - Confirmation with booking details and total.
 
+# Used resources
+1) api refresher from The Codeholic - https://www.youtube.com/watch?v=_iuxZygxz98
+
 
 
