@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Resources\RateResource;
 use App\Models\Room;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;

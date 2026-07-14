@@ -14,3 +14,7 @@ Route::get('/admin', function () {
 Route::get('/guest', function () {
     return Inertia::render('Guest');
 })->name('guest');
+
+Route::get('/booking', function () {
+    return Inertia::render('Booking');
+})->name('booking');
