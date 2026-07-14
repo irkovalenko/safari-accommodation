@@ -42,4 +42,5 @@ The app currently contains 3 pages:
    php artisan serve
    npm run dev
    php artisan migrate:fresh --seed
+   npm install canvas-confetti
 ```
