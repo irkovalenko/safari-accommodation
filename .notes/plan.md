@@ -57,7 +57,13 @@ STEPS APPLIED
 1. Created a form for user input - accommodation, room, check_in_date, check_out_date (this way multiple accommodations can be handled in the future), like in booking.com (Guest.jsx in frontend, AccommodationController and separate endpoint in api api/accommodations)
 2. Added the calculation of the stay for user before he proceeds.
 3. Handle the availability check based on bookings (+separate AvailabilityController and endpoint)
-4. Proceed step redirecting to booking check and then confirmation (then the booking must be added to the admin page)
+
+- create a separate endpoint Route::post('/rooms/{room}/availability', [AvailabilityController::class, 'checkAvailability'])
+- new function checkAvailability to AvailabilityController
+- incorporate this to in frontend so the user cannot proceed until he selects the room when it is available
+
+
+4. Proceed to booking (after availability check) step redirecting to booking form, then confirmation (then the booking must be added to the admin page).
 
 # Used resources
 1) api refresher from The Codeholic - https://www.youtube.com/watch?v=_iuxZygxz98
